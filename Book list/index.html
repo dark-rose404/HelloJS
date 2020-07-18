@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloJS | Book list</title>
+    <link rel="icon" href="../img/jscript.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="book-list container">
+        <div class="book-list-header">
+            <h2 class="h2">Book list</h2>
+        </div>
+        <div class="book-list-body">
+            <form class="book-list-form">
+                <div class="form-blocks">
+                    <label for="book-list_title" class="block">Book Title</label>
+                    <input type="text" id="book-list_title" class="block input-form">
+                </div>
+                <div class="form-blocks">
+                    <label for="book-list_author" class="block">Book Author</label>
+                    <input type="text" id="book-list_author" class="block input-form">
+                </div>
+                <div class="form-blocks">
+                    <label for="book-list_isbn" class="block">ISBN</label>
+                    <input type="text" id="book-list_isbn" class="block input-form">
+                </div>
+                <button type="submit" class="block submit-btn">submit</button>
+            </form>
+        </div>
+        <div class="book-list-display">
+            <table class="tables">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Isbn</th><th><a href="#" class="del-link"><i class="del">x</i></a></th>
+                </tr>
+                <tr>
+                    <td>Toddles gate</td>
+                    <td>johny grobbs</td>
+                    <td>ae284ll</t><th><a href="#" class="del-link"><i class="del">x</i></a></th>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Isbn</t><th><a href="#" class="del-link"><i class="del">x</i></a></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>
