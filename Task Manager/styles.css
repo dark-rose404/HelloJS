@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 10px;
+}
+.task-manager {
+    margin: 4rem auto;
+    width: 50%;
+    font-size: 1.7rem;
+    border: 1px solid #f9f8f8;
+    box-shadow: 1px 3px 3px #c0c0c0;
+    padding: 2rem 5rem;
+}
+.task-manager_header {
+    font-style: italic;
+    font-weight: lighter;
+}
+.task-manager_input {
+    height: 2rem;
+    border: none;
+    outline: none;
+    text-indent: 10px;
+    font-size: 1.5rem;
+    display: block;
+    border-bottom: 1px solid #c0c0c0;
+}
+.btn {
+    height: 2rem;
+    padding: .2rem .4rem;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+.hr {
+    margin: 1.3rem 0;
+    width: 100%;
+}
+.task-manager_content {
+    list-style-type: none;
+}
+.right {
+    float: right;
+}
+
+
+
+.alert {
+    width: 100%;
+    background: #c0c0c0;
+}
+.danger {
+    color: red;
+}
+.success {
+    color: green;
+}

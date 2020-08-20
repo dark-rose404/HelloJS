@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lender</title>
+    <link rel="icon" href="../img/js.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="lender">
+            <h2 class="lender-title">Loan calculator</h2>
+            <div class="form">
+                <form>
+                    <div class="block">
+                        <p><span class="span">$</span><input type="text" id="loan_amount" class="input input_amount" placeholder="Enter amount"></p>
+                    </div>
+                    <div class="block">
+                        <p><span class="span">%</span><input type="text" id="loan_percent" class="input input_percent" placeholder="Enter percentage"></p>
+                    </div>
+                    <div class="block">
+                        <input type="text" id="loan_years" class="input input_years" placeholder="input years">
+                    </div>
+                    <button type="submit" class="btn ">Calculate</button>
+                </form>
+            </div>
+            <div class="result">
+                
+                <p class="result-amount">Monthly payment | <span class="result-amount_monthly" id="monthly"></span></p>
+                <p class="result-amount">Total payment | <span class="result-amount_payment" id="payment"></span></p>
+                <p class="result-amount">Total interest | <span class="result-amount_interest" id="interest"></span></p>
+            </div>
+            <img src="../img/loading.gif" alt="" class="loading">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
