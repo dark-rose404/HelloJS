@@ -4,7 +4,9 @@ class LenderUI {
 
     DomUI(){
         // DOM ELEMENTS
-        const amount = document.getElementById('loan_amount'),
+        const title = document.querySelector('.container'),
+              container =  document.querySelector('.lender-title'),
+              amount = document.getElementById('loan_amount'),
               percent = document.getElementById('loan_percent'),
               years = document.getElementById('loan_years'),
               resMonthly = document.getElementById('monthly'),
@@ -13,7 +15,15 @@ class LenderUI {
               loading = document.querySelector('.loading'),
               result = document.querySelector('.result');
               
-        return {amount, percent, years, resMonthly, resPayment, resInterest, loading, result};
+        return {title, container, amount, percent, years, resMonthly, resPayment, resInterest, loading, result};
+    }
+
+
+    AlertUI(msg, cls, dpl){
+        const div = document.createElement('div');
+        const {title, container} = this.DomUI();
+        div.appendChild(document.createTextNode(msg));
+        title.insertBefore(div, container);
     }
 
 
@@ -44,12 +54,11 @@ document.querySelector('form').addEventListener('submit', function(e){
         loading.style.display = "block";
 
     }else {
-        console.log('please check number well'); 
 
         result.style.display = "none"
         loading.style.display = "block";
         setTimeout(function(){
-            loading.style.display = "none";
+            loading.style.display = "none"; 
             result.style.display = "block";
         }, 2000);
     }
