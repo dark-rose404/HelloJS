@@ -4,8 +4,8 @@ class LenderUI {
 
     DomUI(){
         // DOM ELEMENTS
-        const title = document.querySelector('.container'),
-              container =  document.querySelector('.lender-title'),
+        const title = document.querySelector('.lender'),
+              container =  document.querySelector('.container'),
               amount = document.getElementById('loan_amount'),
               percent = document.getElementById('loan_percent'),
               years = document.getElementById('loan_years'),
@@ -18,12 +18,16 @@ class LenderUI {
         return {title, container, amount, percent, years, resMonthly, resPayment, resInterest, loading, result};
     }
 
-
+// NOW WORKING =>  HAS TO BE DIRECT CHILD OF THE NODE 
     AlertUI(msg, cls, dpl){
         const div = document.createElement('div');
         const {title, container} = this.DomUI();
+        div.className = `${cls} alert`;
         div.appendChild(document.createTextNode(msg));
-        title.insertBefore(div, container);
+        container.insertBefore(div, title);
+        setTimeout(function(){
+            document.querySelector(`.alert`).remove();
+        }, 5000);
     }
 
 
@@ -49,18 +53,21 @@ document.querySelector('form').addEventListener('submit', function(e){
             resPayment.textContent = (monthly * calcPay).toFixed(2);
             resInterest.textContent = ((monthly * calcPay) - principal).toFixed(2);
             loading.style.display = "none";
+            result.style.display = "block";
+            UI.AlertUI('successful', 'success', 'game');
         }, 2000);
-        
+        result.style.display = "none";
         loading.style.display = "block";
 
     }else {
-
         result.style.display = "none"
         loading.style.display = "block";
         setTimeout(function(){
             loading.style.display = "none"; 
-            result.style.display = "block";
+            result.style.display = "none";
+            UI.AlertUI('Error parsing', 'danger', 'game');
         }, 2000);
+        
     }
 
     e.preventDefault();
