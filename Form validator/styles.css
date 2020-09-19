@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+#img {
+    background: linear-gradient(to left, rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url('../img/background.jpeg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+#title {
+    font-weight: bold;
+}
+
+.form_validator {
+    margin-top: 30px;
+}
+input, input:active, input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #c0c0c0;
+    width: 100%;
+}

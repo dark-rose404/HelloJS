@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Coded-hola validator  </title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="form-field col-md-8">
+                <div class="img" id="img"></div>
+            </div>
+            <div class="form_validator col-md-4">
+                <h2 class="h2 text-center" id="title">Sign up</h2>
+                <form class="container">
+                    <div class="form-group">
+                        <label for="name">Name </label>
+                        <input type="text" id="name" class="d-block" placeholder="coded-hola" >
+                        <div class="invalid-feedback"> Please enter a valid name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email </label>
+                        <input type="text" id="email" class="d-block" placeholder="codedhola2000@gmail.com">
+                        <div class="invalid-feedback"> Please enter a valid Email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Contact </label>
+                        <input type="number" id="number" class="d-block" placeholder="+2348180975527">
+                        <div class="invalid-feedback"> Enter a valid phone number</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password </label>
+                        <input type="password" id="password" class="d-block" placeholder="***********" >
+                        <div class="invalid-feedback"> Password must contain alphanumeric and be more than 5 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="repass">Password </label>
+                        <input type="password" id="repass" class="d-block" placeholder="***********">
+                        <div class="invalid-feedback"> Password does not match</div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
